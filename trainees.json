@@ -1,1 +1,1 @@
-[{"id":1,"name":"Dinesh","age":30,"active":true},{"id":2,"name":"Charan","age":15,"active":false}]
+[{"id":4,"name":"Dinesh","batch":"Jun/Sep","timings":"10-1pm","days":"weekends"},{"id":1,"name":"Tony","batch":"Jun/Sep","timings":"10-1pm","days":"weekends"},{"id":2,"name":"New Name","batch":"Aug","timings":"7-9pm","days":"weekdays"}]
