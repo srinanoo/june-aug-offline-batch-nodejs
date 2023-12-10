@@ -1,0 +1,44 @@
+Project Titles:
+
+Baskar
+    Warehouse
+Arun
+Mohan
+Sriram
+Dillibabu
+    Tourism Portal
+Anandh
+    Train Booking
+Ajin
+    Stock Screener
+Janani
+Akshay
+    Ecommerce
+Kishore
+Deepesh
+    RealEstate Rental
+Siddharth
+Vignesh A
+
+Dinesh
+    Trainees
+        - Trainees
+        - Course
+        - Batch
+        - Attendance
+        - Timings
+        - Class
+
+        - Trainees
+            - name
+            - age
+            - dob
+        - Class
+            - batch - Jun
+            - mode - online / offline
+            - timings - 10-1pm
+            - days - weekends/weekdays
+        - Trainers
+            - name
+            - age
+            - dob
