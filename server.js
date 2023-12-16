@@ -2,6 +2,7 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 const qs = require('querystring');
+const trainees = require('./traineesRoutes');
 
 http.createServer((req, res) => {
     // console.log(req);
@@ -29,7 +30,8 @@ http.createServer((req, res) => {
         //     res.end();
         // }
 
-        console.log(req.method);
+        // console.log(req.url);
+        // console.log(req.method);
 
         // to retrieve data from querystring (HTTP GET METHOD)
         // let qry = url.parse(req.url, true).query;
@@ -50,20 +52,45 @@ http.createServer((req, res) => {
         // });
         
         // to retrieve data from req/form body (JSON)
-        let body = "";
-        req.on("data", chunk => {
-            body += chunk.toString();
-            console.log(chunk, "chunk");
-        });
-        req.on("end", () => {
-            // console.log(qs.parse(body))
-            // console.log(body, "body");
-            let qry = JSON.parse(body);
-            console.log(qry.crud);
-            console.log(qry.id);
-        });
+        // let body = "";
+        // req.on("data", chunk => {
+        //     body += chunk.toString();
+        //     console.log(chunk, "chunk");
+        // });
+        // req.on("end", () => {
+        //     // console.log(qs.parse(body))
+        //     // console.log(body, "body");
+        //     let qry = JSON.parse(body);
+        //     console.log(qry.crud);
+        //     console.log(qry.id);
+        // });
 
-        res.write("NODE SERVER");
-        res.end();
+        // if(req.url === "/readTrainees") {
+        // } else if(req.url === "/createTrainee") {
+        // } else if(req.url === "/updateTrainee") {
+        // } else if(req.url === "/deleteTrainee") {
+        // }
+
+        switch(req.url) {
+            case "/readTrainees":
+                trainees.readTrainees(req, res);
+                break;
+            case "/createTrainee":
+                trainees.createTrainee(req, res);
+                break;
+            case "/updateTrainee":
+                trainees.updateTrainee();
+                break;
+            case "/deleteTrainee":
+                trainees.deleteTrainee();
+                break;
+            default:
+                res.write("NO ROUTES FOUND!");
+                res.end();
+                break;
+        }
+
+        // res.write("NODE SERVER");
+        // res.end();
     }
 }).listen(4000, () => console.log("Server has started in port 4000"));
