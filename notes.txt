@@ -3,6 +3,7 @@ Project Titles:
 Baskar
     Warehouse
 Arun
+    Social Media Chat App
 Mohan
     Hospital Management
 Sriram
